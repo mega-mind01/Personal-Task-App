@@ -11,121 +11,119 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Personal Task Tracker</title>
+
     <style>
-        ul {
-            list-style: none;
+        body {
+            background-image: url(Screenshot\ 2023-09-28\ 223649.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 300px;
         }
 
-
-        li {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #aaaadc;
-            padding: 10px;
-            /* border: solid red; */
-            width: 300%;
-            margin-top: 30px;
-            margin-left: 30%;
-            /* margin-right: 200% !important; */
+        .container {
+            background-image: linear-gradient(#a3a3ed, #a2f4a2);
+            text-align: center;
+            width: 500px;
+            margin: 20% auto;
         }
 
+        .header input {
+            width: 80%;
+            height: 25px;
+        }
 
-        .completed {
-            text-decoration: line-through;
+        .header button {
+            background-color: #ea3d3d;
+            height: 25px;
+            margin-bottom: 10px;
         }
 
         .list {
-            width: 50%;
-            margin-left: 20%;
+            padding-right: 30px;
         }
 
-        /* .container-fluid {
-            margin: 30px auto;
-            max-height: 400px;
-        } */
-
-        .container {
-            border: solid blue;
-            margin: ;
-            text-align: center;
-            background-image: linear-gradient(#a3a3ed, #a2f4a2);
-            min-height: 200px;
-            border-radius: 15px;
-            padding: 0;
-            width: 50%;
+        ul {
+            list-style-type: none;
         }
 
-        li span {
-            display: block;
-            justify-content: start;
-            border: solid red;
-            
+        li {
+            margin-bottom: 5px;
+            display: flex;
+            text-align: start;
+            background-color: #6575d2;
         }
 
-        ul button {
-            margin-left: 10px;
-            background-color: #5a5aeb;
-            border: none;
-            color: white;
-            
+        span {
+            margin-right: 43%;
+            margin-bottom: 5px;
+            width: 40%;
         }
 
-        button:hover {
-            background-color: #0f0fef;
+        input[type="checkbox"] {
+            margin-right: 20px;
+            min-width: 20px;
+            min-height: 20px;
         }
 
-        #task-input {
-            border: solid #127a59;
-        }
-
-        .cont {
-            background-color: #127a59;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        li button {
+            border: solid olive;
+            padding-inline: 5px;
+            background-color: #ea3d3d;
         }
 
         .footer {
-            margin-top: 300px;
+            text-align: start;
+            font-size: large;
+        }
+
+        .footer input {
+            height: 15px;
+            width: 15px;
+        }
+
+        .head1 {
+            color: rgb(117, 79, 18);
         }
     </style>
 </head>
 
-<body class="cont">
-
-    <!-- <div class="container-fluid"> -->
-        <div class="container">
-            <div class="row mt-4 mb-3">
-                <div class="col-md-12">
-                    <h1>Task Tracker</h1>
-                </div>
+<body>
+    <div class="container">
+        <div class="row head1">
+            <div class="col-md-12">
+                <h1>Personal Task Tracker</h1>
             </div>
+        </div>
 
-            <div class="row my-3">
-                <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="header">
                     <input type="text" id="task-input" placeholder="Add a new task">
                     <button id="add-task">Add Task</button>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="list">
                     <ul id="task-list" class="list">
                         <!-- Tasks will be added here -->
                         <li><span>Going for Shopping</span><input type="checkbox"><button>Delete</button></li>
                     </ul>
                 </div>
             </div>
+        </div>
 
-           <div class="row">
-            <div class="col-md-12 footer">
-                <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer">
                     <label>Show completed tasks: <input type="checkbox" id="show-completed"></label>
                 </div>
             </div>
-           </div>
         </div>
+    </div>
 
-    <!-- </div> -->
     <script>
         // JavaScript code goes here
         const taskInput = document.querySelector("#task-input");
